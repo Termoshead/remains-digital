@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remains Digital — Biological Synthesis & Cognitive Systems</title>
+    <link rel="icon" type="image/png" href="assets/favicon.ico">
+    <link rel="stylesheet" href="style-web.css">
+</head>
+<body>
+
+    <header class="corp-header">
+        <div class="logo-container">
+            <img src="assets/logo.png" alt="Remains Digital Logo" class="corp-logo">
+        </div>
+        
+        <nav class="corp-nav">
+            <button class="nav-btn active" onclick="switchView('home', this)">Home</button>
+            <button class="nav-btn" onclick="switchView('balls', this)">Balls</button>
+            <button class="nav-btn" onclick="switchView('about', this)">About Us</button>
+        </nav>
+    </header>
+
+    <main class="corp-main">
+        
+        <section id="view-home" class="view-section">
+            <div class="corporate-banner">
+                <div class="banner-inner">
+                    <h2>WHAT REMAINS IS OFTEN MORE IMPORTANT THAN WHAT WAS LOST.</h2>
+                </div>
+            </div>
+
+            <div class="home-grid">
+                <div class="home-text-block">
+                    <h1>WELCOME TO REMAINS DIGITAL</h1>
+                    <p class="lead-text">Remains Digital is a genetic laboratory focused on research, experimentation, and the development of new biological systems.</p>
+                    <p>Our work ranges from controlled experiments and genetic studies to long-term preservation and experimental applications.</p>
+                    <p>Explore our projects, research, and laboratory archive.</p>
+                    
+                    <div class="home-actions">
+                        <button class="corp-primary-btn" onclick="switchView('balls', document.querySelector('.nav-btn:nth-child(2)'))">Access Simulation Unit</button>
+                    </div>
+                </div>
+
+                <div class="home-gallery-passarel">
+                    <div class="passarel-track">
+                        <div class="lab-card">
+                            <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80" alt="Lab Specimen">
+                            <span class="img-tag">SPECIMEN // 04-B</span>
+                        </div>
+                        <div class="lab-card">
+                            <img src="https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=600&q=80" alt="Genetic Mapping">
+                            <span class="img-tag">GENETIC MAPPING</span>
+                        </div>
+                        <div class="lab-card">
+                            <img src="https://images.unsplash.com/photo-1579165466741-7f35e4755660?auto=format&fit=crop&w=600&q=80" alt="Biological Matrix">
+                            <span class="img-tag">MATRIX ANALYSIS</span>
+                        </div>
+                        <div class="lab-card">
+                            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Cryo Preservation">
+                            <span class="img-tag">CRYO-PRESERVATION</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-balls" class="view-section hidden">
+            <div class="game-wrapper">
+                <div class="game-intro-text">
+                    <h2>Subject Cognitive Simulation Unit</h2>
+                    <p>Internal diagnostics tool v4.0.2 - Real-time behavioral tracking.</p>
+                </div>
+                
+                <div class="game-container-lite">
+                    <div id="gameArea">
+                        <canvas id="gameCanvas" width="500" height="500"></canvas>
+                    </div>
+                    
+                    <div class="lite-controls">
+                        <h3 style="color: #fff; font-size: 14px; margin-bottom: 5px; letter-spacing: 1px;">SPAWN UNIT</h3>
+                        
+                        <button id="btn-sword" class="class-btn" style="border-left: 5px solid #1f4068;">
+                            <span class="ball-icon" style="background: #1f4068;"></span> Sword (Blue)
+                        </button>
+                        <button id="btn-fighter" class="class-btn" style="border-left: 5px solid #e94560;">
+                            <span class="ball-icon" style="background: #e94560;"></span> Fighter (Red)
+                        </button>
+                        <button id="btn-archer" class="class-btn" style="border-left: 5px solid #106c3a;">
+                            <span class="ball-icon" style="background: #117f23;"></span> Archer (Green)
+                        </button>
+                        <button id="btn-mage" class="class-btn" style="border-left: 5px solid #7b2cbf;">
+                            <span class="ball-icon" style="background: #7b2cbf;"></span> Mage (Violet)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-about" class="view-section hidden">
+            <div class="hero-content about-content">
+                <h1>About Us</h1>
+                
+                <p>Remains Digital is a private research and development company specializing in genetics, biological systems, and the preservation of complex biological information.</p>
+                
+                <p>Our work focuses on understanding how biological patterns persist, change, and express themselves over time. By combining genetic research with computational analysis and proprietary experimental systems, we investigate processes that are not always readily observable through conventional methods.</p>
+                
+                <p>We maintain a diverse portfolio of private research initiatives, many of which are conducted independently of public institutions or conventional research frameworks. This allows our teams to pursue long-term objectives without unnecessary interference or premature exposure.</p>
+                
+                <p>Certain findings are made public when appropriate. Others remain within our facilities until their implications can be properly assessed.</p>
+                
+                <p>We believe that biological information is rarely lost. It is altered, transferred, fragmented, and, under the right conditions, recoverable.</p>
+                
+                <p>Our research is dedicated to understanding those conditions.</p>
+                
+                <p class="about-quote">Because what remains is often more important than what was lost.</p>
+            </div>
+        </section>
+
+        <section id="view-qa" class="view-section hidden">
+            <div class="qa-wrapper" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+                <div class="game-intro-text" style="text-align: center; margin-bottom: 30px;">
+                    <h2>Q&A // FREQUENTLY ASKED QUESTIONS</h2>
+                    <p>Internal documentation and operational guidelines for laboratory inquiries.</p>
+                </div>
+
+                <div class="qa-list" style="display: flex; flex-direction: column; gap: 20px;">
+                    <div class="qa-item" style="background: #12141c; border: 1px solid #1f2833; border-radius: 6px; padding: 22px 25px;">
+                        <h3 style="color: #ffffff; font-size: 16px; margin-bottom: 10px;">What is Remains Digital?</h3>
+                        <p style="color: #8c929c; font-size: 14px; line-height: 1.6; margin: 0;">Remains Digital is a genetic research laboratory focused on biological experimentation, development, and preservation.</p>
+                    </div>
+
+                    <div class="qa-item" style="background: #12141c; border: 1px solid #1f2833; border-radius: 6px; padding: 22px 25px;">
+                        <h3 style="color: #ffffff; font-size: 16px; margin-bottom: 10px;">What kind of research is conducted here?</h3>
+                        <p style="color: #8c929c; font-size: 14px; line-height: 1.6; margin: 0;">Our work includes genetic research, biological experiments, specimen development, and the study of different forms of biological material.</p>
+                    </div>
+
+                    <div class="qa-item" style="background: #12141c; border: 1px solid #1f2833; border-radius: 6px; padding: 22px 25px;">
+                        <h3 style="color: #ffffff; font-size: 16px; margin-bottom: 10px;">Can I see the laboratory's research?</h3>
+                        <p style="color: #8c929c; font-size: 14px; line-height: 1.6; margin: 0;">Selected projects, experiments, and archived material are available throughout the website.</p>
+                    </div>
+
+                    <div class="qa-item" style="background: #12141c; border: 1px solid #1f2833; border-radius: 6px; padding: 22px 25px;">
+                        <h3 style="color: #ffffff; font-size: 16px; margin-bottom: 10px;">Can I participate in the experiments?</h3>
+                        <p style="color: #8c929c; font-size: 14px; line-height: 1.6; margin: 0;">Some projects may include interactive experiences or simulations. Any available participation will be clearly indicated via <a href="#" onclick="switchView('contact', this); return false;" style="color: #66fcf1; text-decoration: underline;">mail</a>.</p>
+                    </div>
+
+                    <div class="qa-item" style="background: #12141c; border: 1px solid #1f2833; border-radius: 6px; padding: 22px 25px;">
+                        <h3 style="color: #ffffff; font-size: 16px; margin-bottom: 10px;">How often is new material added?</h3>
+                        <p style="color: #8c929c; font-size: 14px; line-height: 1.6; margin: 0;">The laboratory archive is updated as new projects and experiments become available.</p>
+                    </div>
+
+                    <div class="qa-item" style="background: #12141c; border: 1px solid #1f2833; border-radius: 6px; padding: 22px 25px;">
+                        <h3 style="color: #ffffff; font-size: 16px; margin-bottom: 10px;">Where can I learn more?</h3>
+                        <p style="color: #8c929c; font-size: 14px; line-height: 1.6; margin: 0;">Explore the different sections of the website to discover our research, projects, and archived material.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-contact" class="view-section hidden">
+            <div class="contact-wrapper" style="max-width: 650px; margin: 40px auto; padding: 0 20px;">
+                <div class="game-intro-text" style="text-align: center; margin-bottom: 30px;">
+                    <h2>TRANSMISSION // CONTACT LABORATORY</h2>
+                    <p>Thank you for your interest in Remains Digital research initiatives.</p>
+                </div>
+
+                <form id="ajaxForm" action="https://formspree.io/f/mgaoankv" method="POST" class="contact-form" style="background: #12141c; border: 1px solid #1f2833; border-radius: 6px; padding: 30px; display: flex; flex-direction: column; gap: 20px;">
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+                        <label style="color: #c5c6c7; font-size: 13px; font-family: monospace; letter-spacing: 1px;">SUBJECT NAME / ALIAS</label>
+                        <input type="text" name="name" required placeholder="Enter designation..." style="background: #0b0c10; border: 1px solid #1f2833; color: #fff; padding: 12px; border-radius: 4px; font-size: 14px;">
+                    </div>
+
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+                        <label style="color: #c5c6c7; font-size: 13px; font-family: monospace; letter-spacing: 1px;">COMMUNICATION CHANNEL (EMAIL)</label>
+                        <input type="email" name="email" required placeholder="name@domain.com" style="background: #0b0c10; border: 1px solid #1f2833; color: #fff; padding: 12px; border-radius: 4px; font-size: 14px;">
+                    </div>
+
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+                        <label style="color: #c5c6c7; font-size: 13px; font-family: monospace; letter-spacing: 1px;">CUSTOM TRANSMISSION / MESSAGE</label>
+                        <textarea name="message" rows="5" required placeholder="Type your inquiry or experimental notes..." style="background: #0b0c10; border: 1px solid #1f2833; color: #fff; padding: 12px; border-radius: 4px; font-size: 14px; resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" id="formBtn" class="corp-primary-btn" style="margin-top: 10px; width: 100%; cursor: pointer;">TRANSMIT DATA</button>
+                    
+                    <p id="formResponse" style="color: #66fcf1; font-size: 13px; text-align: center; margin: 0; display: none; font-family: monospace;"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="corp-footer">
+        <div class="footer-content">
+            <div class="footer-disclaimer">
+                <p>&copy; 2026 Remains Digital Inc. All rights reserved. Proprietary biological systems and cognitive mapping frameworks are protected under international intellectual property treaties. Unauthorized access, replication, or extraction of neural constants is strictly prohibited and subject to immediate federal and corporate intervention.</p>
+            </div>
+            
+            <div class="footer-actions">
+                <button class="footer-btn" onclick="switchView('contact', this)">Contact</button>
+                <button class="footer-btn" onclick="switchView('qa', this)">Q&A</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function switchView(viewName, btnElement) {
+            document.querySelectorAll('.view-section').forEach(el => el.classList.add('hidden'));
+            document.getElementById(`view-${viewName}`).classList.remove('hidden');
+
+            if (btnElement && btnElement.classList && btnElement.classList.contains('nav-btn')) {
+                document.querySelectorAll('.corp-nav .nav-btn').forEach(el => el.classList.remove('active'));
+                btnElement.classList.add('active');
+            }
+        }
+
+        document.getElementById("ajaxForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+            const form = event.target;
+            const btn = document.getElementById("formBtn");
+            const responseMsg = document.getElementById("formResponse");
+
+            btn.textContent = "TRANSMITTING...";
+            btn.disabled = true;
+
+            const data = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    responseMsg.style.display = "block";
+                    responseMsg.style.color = "#66fcf1";
+                    responseMsg.textContent = "TRANSMISSION SUCCESSFUL. DATA RECORDED BY ARCHIVE.";
+                    form.reset();
+                } else {
+                    throw new Error("Error en la transmisión.");
+                }
+            } catch (error) {
+                responseMsg.style.display = "block";
+                responseMsg.style.color = "#e94560";
+                responseMsg.textContent = "TRANSMISSION FAILED. CHECK NETWORK CONSTANTS.";
+            } finally {
+                btn.textContent = "TRANSMIT DATA";
+                btn.disabled = false;
+            }
+        });
+    </script>
+
+    <script src="lite-game.js"></script>
+</body>
+</html>
